@@ -17,7 +17,7 @@ function App() {
 <Jumbotron />
 <HighStrategy />
 <CasosdeExito />
-<Stats />
+<Stats id="Contacto"/>
 <Contacto />
 <Footer />
         </div>
