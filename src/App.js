@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import 'flowbite';
+
+import NavigationBar from './Components/NavigationBar';
+import React from 'react';
+import Jumbotron from './Components/Jumbotron';
+import HighStrategy from "./Components/HighStrategy"
+import CasosdeExito from "./Components/CasosdeExito"
+import Stats from './Components/Stats';
+import Contacto from "./Components/Contacto"
+import Footer from "./Components/Footer"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return ( <div className = "App" >
+        
+<NavigationBar /> 
+<Jumbotron />
+<HighStrategy />
+<CasosdeExito />
+<Stats />
+<Contacto />
+<Footer />
+        </div>
+    );
 }
 
 export default App;
