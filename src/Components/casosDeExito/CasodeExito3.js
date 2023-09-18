@@ -1,5 +1,5 @@
 import React from "react";
-import imgpersona from "./img/persona1.jpg"
+import imgpersona from "./img/persona3.jpg"
 
 function CasodeExito1() {
     return (
