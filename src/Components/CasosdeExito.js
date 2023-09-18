@@ -6,7 +6,7 @@ import CasodeExito3 from './casosDeExito/CasodeExito3';
 
 const CasodeExito = () => {
   return (
-<div className="flex w-full justify-center ">
+<div className="flex flex-wrap w-full justify-center md:flex-col  ">
   
   <div className="p-5">
     <CasodeExito1  />
