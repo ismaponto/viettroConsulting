@@ -12,15 +12,16 @@ import Footer from "./Components/Footer"
 import Paraquien from './Components/Paraquien';
 function App() {
     return ( <div className = "App" >
-        
+<Contacto />
 <NavigationBar /> 
 <Jumbotron />
 <HighStrategy />
 <Paraquien />
-
 <CasosdeExito />
+
 <Stats id="Contacto"/>
-<Contacto />
+
+
 <Footer />
         </div>
     );
