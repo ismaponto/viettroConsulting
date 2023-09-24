@@ -9,13 +9,15 @@ import CasosdeExito from "./Components/CasosdeExito"
 import Stats from './Components/Stats';
 import Contacto from "./Components/Contacto"
 import Footer from "./Components/Footer"
-
+import Paraquien from './Components/Paraquien';
 function App() {
     return ( <div className = "App" >
         
 <NavigationBar /> 
 <Jumbotron />
 <HighStrategy />
+<Paraquien />
+
 <CasosdeExito />
 <Stats id="Contacto"/>
 <Contacto />
