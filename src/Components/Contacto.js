@@ -13,7 +13,8 @@ const Contacto = () => {
         rootElement={document.getElementById("root")}
         text="Organicemos una llamada!"
         textColor="#ffffff"
-        color="#00a2ff"
+        color="#2737C9"
+        data-collapse-toggle="navbar-default"
       />
     </div>
   );
