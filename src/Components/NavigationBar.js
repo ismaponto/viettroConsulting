@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../logo.png"
+import logo from "../logo1.png"
 
 function NavigationBar ()  {
     return (
