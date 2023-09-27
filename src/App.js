@@ -12,7 +12,7 @@ import Footer from "./Components/Footer"
 import Paraquien from './Components/Paraquien';
 import SoyMatias from './Components/soymatias';
 function App() {
-    return ( <div className = "App" >
+    return ( <div className = "App font-manrope" >
 <Contacto />
 <NavigationBar /> 
 <Jumbotron />
