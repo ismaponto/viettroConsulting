@@ -24,4 +24,4 @@ Soy Matias  </h3>
   );
 }
 
-export default SoyMatias;
+export default Soymatias;
