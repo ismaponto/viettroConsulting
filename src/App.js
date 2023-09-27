@@ -10,6 +10,7 @@ import Stats from './Components/Stats';
 import Contacto from "./Components/Contacto"
 import Footer from "./Components/Footer"
 import Paraquien from './Components/Paraquien';
+import SoyMatias from './Components/soymatias';
 function App() {
     return ( <div className = "App" >
 <Contacto />
@@ -18,7 +19,7 @@ function App() {
 <HighStrategy />
 <Paraquien />
 <CasosdeExito />
-
+<SoyMatias />
 <Stats id="Contacto"/>
 
 
