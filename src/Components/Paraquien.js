@@ -16,7 +16,7 @@ function Paraquien() {
         <img className="w-96" src={imgpersona} alt="personas" />
       </div>
     
-      <div className="flex flex-col max-w-lg flex-0 center text-xl text-gray-500 justify-center"><ul>
+      <div className="flex flex-col max-w-lg flex-0 center text-xl text-gray-500 justify-center"><ul className='list-disc '>
          <li>       <p>Para personas que se sienten desorganizadas y no tienen un plan</p>
 </li>
       <li>       <p>Para personas que no saben ordenar sus objetivos y se sienten improductivas</p>
@@ -30,7 +30,7 @@ function Paraquien() {
 
     <div className="flex flex-row-reverse flex-wrap w-full justify-center md:flex-col">
    
-       <div className="flex flex-col max-w-lg center text-xl text-gray-500 justify-center p-8"><ul><li>       <p>Para emprendedores que se sienten desorganizados</p>
+       <div className="flex flex-col max-w-lg center text-xl text-gray-500 justify-center p-8"><ul className='list-disc'><li>       <p>Para emprendedores que se sienten desorganizados</p>
 </li>
        <li>       <p>Para emprendedores que no tienen un plan</p>
 </li>
@@ -51,8 +51,8 @@ function Paraquien() {
         <img img className="w-72"src={imgfrustrated} alt="emprendedores" />
       </div>
       <div className="flex flex-col  max-w-lg center text-xl text-gray-500 justify-center p-8">
-       <p>Estás cansado de: </p><ul>
-       <li>       <p>ver cómo otros emprendedores triunfan mientras tú te quedas atrás?</p>
+       <p>Estás cansado de: </p><ul className='list-disc'>
+       <li>       <p>Ver cómo otros emprendedores triunfan mientras tú te quedas atrás?</p>
 </li>
        <li>       <p>Perder tiempo y dinero en tu negocio.</p>
 </li>
@@ -69,7 +69,7 @@ function Paraquien() {
     <div className="flex p-8 flex-row flex-wrap w-full justify-center md:flex-col  p-6">
     
       <div className="flex flex-col max-w-lg center text-xl text-gray-500 justify-center p-24">
-          <h3>Conmigo vas a: </h3><ul><li>       <p>Convertirte en un emprendedor con alto foco, que sabe a dónde va. </p>
+          <h3>Conmigo vas a: </h3><ul className='list-disc'><li>       <p>Convertirte en un emprendedor con alto foco, que sabe a dónde va. </p>
 </li>
           <li>       <p>Sabrás planificar y organizar tu negocio.</p>
 </li>
