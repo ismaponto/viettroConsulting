@@ -11,7 +11,7 @@ const Jumbotron = () => {
       <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
         <h1 className="mb-4 text-4xl font-extrabold font-manrope tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Del Caos al orden</h1>
         <p className="mb-8 text-lg font-normal font-manrope text-gray-300 lg:text-xl sm:px-16 lg:px-48">No podes encontrarle la vuelta al desorden de tu empresa? Intentas muchas cosas pero no conseguis objetivos?
-        Con el metodo Hig Stratégie vamos a ordenar tus esfuerzos para alcanzar las metas</p>
+        Con el metodo High Stratégie vamos a ordenar tus esfuerzos para alcanzar las metas</p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a href="#Contacto" className="inline-flex justify-center font-manrope items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 Quiero saber más           <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
