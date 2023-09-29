@@ -1,13 +1,10 @@
 import React from 'react';
 import imgMatias from "./soymatias/matiasreu.jpg";
-import { Helmet } from 'react-helmet';
 
 function Soymatias() {
   return (
     <div id="matias" className="flex flex-wrap w-full justify-center p-8 md:flex-col">
-      <Helmet>
-        <meta name="description" content="Matias Viettro es un gerente, emprendedor y abogado con más de 20 proyectos liderados en los últimos 5 años. Descubre su experiencia en planificación y gestión estratégica." />
-      </Helmet>
+
       <h3 className="mb-2 flex flex-col center justify-center w-full text-3xl bg-indigo-800 w-100 text-blue-50 text-bold dark:text-white h-36">
         Soy Matias
       </h3>

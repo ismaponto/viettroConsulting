@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import imgpersona from "./Paraquien/people.svg"
 import imgemprendedor from "./Paraquien/emprendedor.svg"
 import imgfrustrated from "./Paraquien/frustrated.svg"
@@ -7,9 +6,7 @@ import imggoal from "./Paraquien/goal.svg"
 
 function Paraquien() {
   return ( <div className="flex flex-wrap w-full justify-center md:flex-col">
-  <Helmet>
-    <meta name="description" content="Descubre si el método High Stratégie es adecuado para ti. Para personas desorganizadas, emprendedores y más." />
-  </Helmet>
+ 
   <h2 className="mb-2 flex flex-col center justify-center w-full text-3xl bg-indigo-800 w-100 text-blue-50 text-bold dark:text-white h-36">
     ¿Es el método High Stratégie para mí?
   </h2>
