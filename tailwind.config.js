@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors');
 module.exports = {
     theme: {
         colors: {
@@ -11,6 +12,14 @@ module.exports = {
             serif: ['Merriweather', 'serif'],
         },
         extend: {
+
+            colors: {
+                // Define your custom colors here
+                // For example:
+                primary: '#3490dc',
+                secondary: '#ffed4a',
+            },
+
             spacing: {
                 '128': '32rem',
                 '144': '36rem',
