@@ -9,13 +9,13 @@ const CasodeExito = () => {
 <div id={"exito"} className="flex flex-wrap w-full justify-center md:flex-col  ">
 <h4 className="mb-2 flex flex-col center justify-center font-manrope w-full text-3xl bg-indigo-800 w-100 text-blue-50 text-bold dark:text-white h-36 ">Algunas personas que ya han seguido el curso</h4>
 
-  <div className="p-5">
+  <div className="p-5 sm:max-w-sm">
     <CasodeExito1  />
   </div>
-  <div className="p-5">
+  <div className="p-5 sm:max-w-sm">
     <CasodeExito2  />
   </div>
-  <div className="p-5">
+  <div className="p-5 sm:max-w-sm">
     <CasodeExito3 />
   </div>
   

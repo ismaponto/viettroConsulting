@@ -54,7 +54,7 @@ function Stats() {
                 )}
               </div>
               <dd className="font-light text-blue-50 dark:text-blue-50">
-                {index === 0
+                { index === 0
                   ? "Nuevos Emprendedores"
                   : index === 1
                   ? "Empresas trabajando actualmente conmigo"

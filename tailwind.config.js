@@ -1,34 +1,30 @@
-const colors = require("tailwindcss/colors"); // Import the colors module
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+    content: ['./src/**/*.{html,js}'],
     theme: {
         colors: {
-            gray: colors.Gray,
-            blue: colors.sky,
-            red: colors.rose,
-            pink: colors.fuchsia,
+            'blue': '#1fb6ff',
+            'purple': '#7e5bef',
+            'pink': '#ff49db',
+            'orange': '#ff7849',
+            'green': '#13ce66',
+            'yellow': '#ffc82c',
+            'gray-dark': '#273444',
+            'gray': '#8492a6',
+            'gray-light': '#d3dce6',
         },
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
             serif: ['Merriweather', 'serif'],
         },
         extend: {
-            colors: {
-                // Define your custom colors here
-                // For example:
-                primary: '#3490dc',
-                secondary: '#ffed4a',
-            },
             spacing: {
-                '128': '32rem',
-                '144': '36rem',
+                '8xl': '96rem',
+                '9xl': '128rem',
             },
             borderRadius: {
                 '4xl': '2rem',
-            },
-            fontFamily: {
-                manrope: ['Manrope', 'sans-serif'],
-            },
-        },
+            }
+        }
     },
-};
+}
