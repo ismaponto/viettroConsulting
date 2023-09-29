@@ -15,6 +15,7 @@ const Contacto = () => {
         textColor="#ffffff"
         color="#2737C9"
         data-collapse-toggle="navbar-default"
+        className="w-48"
       />
     </div>
   );
