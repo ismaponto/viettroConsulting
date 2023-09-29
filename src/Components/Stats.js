@@ -9,15 +9,8 @@ function Stats() {
   const [counting, setCounting] = useState([0, 0, 0]);
 
   const { ref, inView } = useInView({
-    triggerOnce: true, // Solo activar una vez
+    triggerOnce: true,
   });
-
-  useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-      startCounting();
-    }
-  }, [inView]);
 
   const startCounting = () => {
     if (!countStarted) {
@@ -39,6 +32,13 @@ function Stats() {
       }, 100);
     }
   };
+  
+  useEffect(() => {
+    if (inView && !countStarted) {
+      setIsVisible(true);
+      startCounting();
+    }
+  }, [inView, countStarted]);
 
   return (
     <section className="bg-indigo-800 dark:bg-gray-900">

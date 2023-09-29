@@ -43,10 +43,9 @@
         ]
     },
     "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.0.0",
         "autoprefixer": "^10.4.15",
         "postcss": "^8.4.29",
-        "react-scripts": "^5.0.1",
-        "@babel/plugin-proposal-private-property-in-object": "^7.0.0"
-
+        "react-scripts": "^5.0.1"
     }
 }
