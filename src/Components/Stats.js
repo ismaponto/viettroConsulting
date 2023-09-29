@@ -12,33 +12,33 @@ function Stats() {
     triggerOnce: true,
   });
 
-  const startCounting = () => {
-    if (!countStarted) {
-      setCountStarted(true);
-      const interval = setInterval(() => {
-        let newCounting = [...counting];
-        let allFinished = true;
-        for (let i = 0; i < countEnd.length; i++) {
-          if (counting[i] < countEnd[i]) {
-            newCounting[i] += 1;
-            allFinished = false;
-          }
-        }
-        setCounting(newCounting);
-
-        if (allFinished) {
-          clearInterval(interval);
-        }
-      }, 100);
-    }
-  };
-  
   useEffect(() => {
+    const startCounting = () => {
+      if (!countStarted) {
+        setCountStarted(true);
+        const interval = setInterval(() => {
+          let newCounting = [...counting];
+          let allFinished = true;
+          for (let i = 0; i < countEnd.length; i++) {
+            if (counting[i] < countEnd[i]) {
+              newCounting[i] += 1;
+              allFinished = false;
+            }
+          }
+          setCounting(newCounting);
+  
+          if (allFinished) {
+            clearInterval(interval);
+          }
+        }, 100);
+      }
+    };
+  
     if (inView && !countStarted) {
       setIsVisible(true);
       startCounting();
     }
-  }, [inView, countStarted], [] );
+  }, [inView, countStarted, countEnd, counting]);
 
   return (
     <section className="bg-indigo-800 dark:bg-gray-900">
