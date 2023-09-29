@@ -1,8 +1,9 @@
 import './App.css';
 import 'flowbite';
 
-import NavigationBar from './Components/NavigationBar';
-import React from 'react';
+import React from "react";
+// import ReactDOM from "react-dom";
+import NavigationBar from "./Components/NavigationBar"
 import Jumbotron from './Components/Jumbotron';
 import HighStrategy from "./Components/HighStrategy"
 import CasosdeExito from "./Components/CasosdeExito"
