@@ -5,7 +5,7 @@ import linkedinico from "./ico/linkedin.png"
 function Footer() {
     return (
       <footer className="flex bg-white rounded-lg shadow m-2 dark:bg-gray-800 p-8 ">
-        <div className="mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <div className="mx-auto max-w-screen-xl p-4 sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023 <a href="#Contacto" className="hover:underline">developed by </a> Ismael Pontoriero.
           </span>

@@ -1,17 +1,19 @@
 import React from 'react';
-import imgMatias from "./soymatias/matiasreu.jpg";
+import imgMatias from "./soymatias/matias.jpg";
+import "../App.css"
 
 function Soymatias() {
   return (
-    <div id="matias" className="flex w-full flex-wrap w-full justify-center  md:flex-col ">
+    <div id="matias" className="flex w-full flex-wrap w-full justify-center ">
 
-      <h3 className="mb-2 flex flex-col center justify-center w-full text-3xl bg-indigo-800 w-100 text-blue-50 text-bold dark:text-white h-36">
+      <h3 className="mb-2 flex flex-col center justify-center w-full text-3xl bg-indigo-800  text-blue-50 text-bold dark:text-white h-36">
         Soy Matias
       </h3>
 
-      <div className="flex flex-row flex-wrap w-full justify-center md:flex-wrap md:w-auto md:flex-col">
-        <div className="flex flex-none inline-flex p-8">
-          <img className="h-96 overflow-hidden  md:h-4" src={imgMatias} alt="Matias Reu"  />
+      <div className="flex flex-row flex-wrap w-full justify-center  sm:w-auto ">
+        <div className="flex flex-none inline-flex ">          
+        <img className="flex max-w-sm overflow-hidden p-4" src={imgMatias} alt="Matias Viettro"/> 
+
         </div>
 
         <div className="flex flex-col max-w-xl flex-0 center leading-10 text-xxl text-gray-400 justify-center">
