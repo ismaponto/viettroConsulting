@@ -38,7 +38,7 @@ function Stats() {
       setIsVisible(true);
       startCounting();
     }
-  }, [inView, countStarted]);
+  }, [inView, countStarted], [] );
 
   return (
     <section className="bg-indigo-800 dark:bg-gray-900">
