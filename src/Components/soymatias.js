@@ -6,7 +6,7 @@ function Soymatias() {
   return (
     <div id="matias" className="flex w-full flex-wrap w-full justify-center ">
 
-      <h3 className="mb-2 flex flex-col center justify-center w-full text-3xl bg-indigo-800  text-blue-50 text-bold dark:text-white h-36">
+      <h3 className="mb-2 flex flex-col center justify-center w-full text-3xl bg-blue-800  text-blue-50 text-bold dark:text-white h-36">
 Creador del método High Stratégie    </h3>
 
       <div className="flex flex-row flex-wrap w-full justify-center  sm:w-auto ">

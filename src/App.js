@@ -8,12 +8,12 @@ import CasosdeExito from "./Components/CasosdeExito"
 import Stats from './Components/Stats';
 import Contacto from "./Components/Contacto"
 import Footer from "./Components/Footer"
+import VisionComponent from './Components/Vision.js';
 import Paraquien from './Components/Paraquien';
 import SoyMatias from './Components/soymatias';
 function App() {
     return (<div className="App font-manrope overflow-hidden">
    
-<Contacto />
 <NavigationBar /> 
 <Jumbotron />
 <HighStrategy  />
@@ -21,7 +21,9 @@ function App() {
 <CasosdeExito />
 <SoyMatias />
 <Stats />
+<VisionComponent />
 
+<Contacto />
 
 <Footer />
         </div>

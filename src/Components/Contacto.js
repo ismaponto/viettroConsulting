@@ -1,5 +1,5 @@
 import React from "react";
-import { PopupWidget } from "react-calendly";
+import { PopupWidget, InlineWidget } from "react-calendly";
 
 const Contacto = () => {
   return (
@@ -17,6 +17,13 @@ const Contacto = () => {
         data-collapse-toggle="navbar-default"
         className="w-48"
       />
+
+
+    <div className="App">
+      <h2 className="p-8 text-blue-900 text-xl ">El 50% de las empresas fracasan en los primeros dos años, unite al grupo que superan esa brecha, organicemos una llamada para hablar del futuro de tus proyectos!</h2>
+      <InlineWidget url="https://calendly.com/mativiettro" />
+    </div>
+  
     </div>
   );
 };
