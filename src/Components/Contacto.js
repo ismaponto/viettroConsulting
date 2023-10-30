@@ -19,7 +19,7 @@ const Contacto = () => {
       />
 
 
-    <div className="App">
+    <div className="overflow-hidden">
       <h2 className="p-8 text-blue-900 text-xl ">El 50% de las empresas fracasan en los primeros dos años, unite al grupo que superan esa brecha, organicemos una llamada para hablar del futuro de tus proyectos!</h2>
       <InlineWidget url="https://calendly.com/mativiettro" />
     </div>
