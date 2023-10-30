@@ -1,7 +1,6 @@
 import './App.css';
 
 import React from "react";
-// import ReactDOM from "react-dom";
 import NavigationBar from "./Components/NavigationBar"
 import Jumbotron from './Components/Jumbotron';
 import HighStrategy from "./Components/HighStrategy"
