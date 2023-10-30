@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const VisionComponent = ({ isLoading = false }) => {
+const VisionComponent = () => {
   const text = `Nuestra visión es brindar asesoramientos profesionales high quality a más de 500 emprendedores e intraemprendedores a nivel internacional.`;
 
  
