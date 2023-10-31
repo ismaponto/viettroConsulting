@@ -6,7 +6,7 @@ const VisionComponent = () => {
  
 
   return (
-    <div className=" flex flex-col center justify-center font-manrope w-full text-3xl bg-blue-800 w-100 text-blue-50 text-bold dark:text-white h-36">
+    <div className=" flex flex-col center justify-center h-auto font-manrope w-full text-3xl bg-blue-800 w-100 p-4 text-blue-50 text-bold dark:text-white h-36">
       <h2 className="blue-50 ">{text}</h2>
     </div>
   );
