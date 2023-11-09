@@ -1,10 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import LandingPage from './Components/LandingPage';
 import reportWebVitals from './reportWebVitals';
 import './App.css'; // Importa tu archivo app.css aquí
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <LandingPage />
+},
+  // {
+  //     path: '/login',
+  //     element: <Login />
+  // },
+  // {
+  //     path: '/singUp',
+  //     element: <SingUp />
+  // },
+  // {
+  //     path: '/dashboard',
+  //     element: <Dashboard />
+  // }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -12,9 +32,8 @@ root.render(
      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
      <meta name="google-site-verification" content="yTxojiBKAdvsIIQ8sSmkTjQRYyqztkTmKaaikMEpDoM" />
-
+<RouterProvider router={router} />
    
-    <App />
   </React.StrictMode>
 );   
 
