@@ -1,7 +1,7 @@
 import { useAuth } from "../auth/authProvider";
 import Logout from "../Components/LogOut";
 import { API_url } from "../auth/const";
-import { useEffect, useState } from "react";
+import { useEffect, useState , useCallback} from "react";
 
 export default function Dashboard() {
   const { getUser, getAccessToken } = useAuth();
@@ -15,9 +15,12 @@ export default function Dashboard() {
     body: '',
     completed: false,
   });
-  useEffect(() => {
-    fetchTodos();
-  }, []);
+  const memoizedfetchTodos = useCallback(fetchTodos, [getAccessToken]); // Memoize 'checkAuth' function
+
+	useEffect(() => {
+		memoizedfetchTodos();
+	  }, [memoizedfetchTodos]); // Include memoized dependency
+ 
 
   async function fetchTodos() {
     try {
