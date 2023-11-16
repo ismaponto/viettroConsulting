@@ -1,29 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import LandingPage from './Components/LandingPage';
+import LandingPage from './Routes/LandingPage';
 import reportWebVitals from './reportWebVitals';
 import './App.css'; // Importa tu archivo app.css aquí
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-
+import { AuthProvider } from './auth/authProvider';
+   import Login from './Routes/Login';
+   import SignUp from './Routes/SignUp';
+  import Dashboard from './Routes/Dashboard';
+  import ProtectedRoute from './Routes/protectedRoute';
 const router = createBrowserRouter([
   {
     path: '/',
     element: <LandingPage />
 },
-  // {
-  //     path: '/login',
-  //     element: <Login />
-  // },
-  // {
-  //     path: '/singUp',
-  //     element: <SingUp />
-  // },
-  // {
-  //     path: '/dashboard',
-  //     element: <Dashboard />
-  // }
+  {
+      path: '/login',
+      element: <Login />
+  },
+  {
+      path: '/signUp',
+      element: <SignUp />
+  },
+  {
+      path: '/login',  
+      element: <ProtectedRoute />,
+      children: [
+        {path:'/login/dashboard',
+    element:<Dashboard />}  ]
+      
+  }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -32,10 +39,14 @@ root.render(
      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
      <meta name="google-site-verification" content="yTxojiBKAdvsIIQ8sSmkTjQRYyqztkTmKaaikMEpDoM" />
-<RouterProvider router={router} />
+    <AuthProvider>
+    <RouterProvider router={router} />
+    </AuthProvider>
+    
    
   </React.StrictMode>
 );   
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
