@@ -114,9 +114,7 @@ export function AuthProvider({ children }) {
 				getRefreshToken,
 				saveUser,
 				getUser,
-				signout,
-				getAccessToken
-			}}
+				signout			}}
 		>
 			{' '}
 			 {isLoading ? <div> Loading... </div> : children}  {' '}
