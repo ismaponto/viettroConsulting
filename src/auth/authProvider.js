@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useState, useEffect } from 'react';
+import React, { useContext, createContext, useState, useEffect, useCallback } from 'react';
 import requestNewAccessToken from './requestNewAccessToken';
 import { API_url } from '../auth/const';
 
@@ -19,10 +19,11 @@ export function AuthProvider({ children }) {
 	const [ refreshToken, setRefreshToken ] = useState('');
 	const [ isAuthenticated, setIsAuthenticated ] = useState(false);
 	const [ isLoading, setIsLoading ] = useState(true);
+	const memoizedcheckAuth = useCallback(checkAuth, [accessToken]); // Memoize 'checkAuth' function
 
 	useEffect(() => {
-		checkAuth();
-	}, []); // Correct placement of the closing bracket
+		memoizedcheckAuth();
+	  }, [memoizedcheckAuth]); // Include memoized dependency
 
 	function getAccessToken() {
 		return accessToken;
