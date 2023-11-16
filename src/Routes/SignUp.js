@@ -17,24 +17,24 @@ export default function Login() {
 	const auth = useAuth();
 	const goTo = useNavigate();
 
-	function isEmail(cadena) {
-		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+(\.[^\s@]+)+$/;
-		return regex.test(cadena);
-	}
-  function isSafePassword(password) {
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,15}$/;
-    return regex.test(password);
-}
+// 	function isEmail(cadena) {
+// 		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+(\.[^\s@]+)+$/;
+// 		return regex.test(cadena);
+// 	}
+//   function isSafePassword(password) {
+//     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,15}$/;
+//     return regex.test(password);
+// }
 	async function handleSubmit(e) {
 		e.preventDefault();
-		if (!isEmail(email)) {
-			setErrorresponse('Formato de correo electrónico no válido');
-			return;
-		}
-    if (!isSafePassword(email)) {
-			setErrorresponse('La contraseña no es segura, por favor utiliza una contraseña con una mayuscula, una minuscula, un numero y un simbolo');
-			return;
-		}
+		// if (!isEmail(email)) {
+		// 	setErrorresponse('Formato de correo electrónico no válido');
+		// 	return;
+		// }
+    // if (!isSafePassword(email)) {
+		// 	setErrorresponse('La contraseña no es segura, por favor utiliza una contraseña con una mayuscula, una minuscula, un numero y un simbolo');
+		// 	return;
+		// }
 
 		try {
 			const response = await fetch(`${API_url}/signup`, {
