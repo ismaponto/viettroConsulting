@@ -10,8 +10,11 @@ const AuthContext = createContext({
 	saveUser: (_userData) => {},
 	getUser: () => ({}),
 	signout: () => {},
-	onlySaveUser: (_userData) => {}
-});
+	onlySaveUser: (_userData) => {},
+	accessToken: "",
+	refreshToken: "",
+  });
+  
 
 export function AuthProvider({ children }) {
 	const [ user, setUser ] = useState({});
@@ -32,7 +35,7 @@ export function AuthProvider({ children }) {
 	function saveUser(userData) {
 		setAccessTokenAndRefreshToken(userData.body.accessToken, userData.body.refreshToken);
 		setUser(userData.body.user);
-		setIsAuthenticated(true);
+		
 	}
 
 	function setAccessTokenAndRefreshToken(accessToken, refreshToken) {
@@ -115,7 +118,9 @@ export function AuthProvider({ children }) {
 				getRefreshToken,
 				saveUser,
 				getUser,
-				signout			}}
+				signout,
+			accessToken,
+		refreshToken		}}
 		>
 			{' '}
 			 {isLoading ? <div> Loading... </div> : children}  {' '}
@@ -125,11 +130,12 @@ export function AuthProvider({ children }) {
 
 async function retrieveUserInfo(accessToken) {
 	try {
+		console.log(accessToken, 'accestoken retrieveuserinfo')
 		const response = await fetch(`${API_url}/user`, {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${accessToken.accessToken}`
+				Authorization: `Bearer ${accessToken}`
 			}
 		});
 

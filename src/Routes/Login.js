@@ -27,9 +27,8 @@ export default function Login() {
         const json = await response.json(); 
 
         if (json.body.accessToken && json.body.refreshToken) {
-        auth.saveUser(json);
+          auth.saveUser(json);
           auth.setAccessTokenAndRefreshToken(json.body.accessToken, json.body.refreshToken);
-          console.log(json.body.accessToken, json.body.refreshToken,'accesrefresh');
           goTo('/login/dashboard');
       }
 
