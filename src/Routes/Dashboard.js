@@ -33,20 +33,17 @@ export default function Dashboard() {
 				SaccessToken = getAccessToken().accessToken;
 				setaccessToken(SaccessToken);
 			}
-			console.log(SaccessToken, 'SaccessToken');
 			const response = await fetch(`${API_url}/todos`, {
 				headers: {
 					'Content-Type': 'application/json',
 					Authorization: `Bearer ${SaccessToken}`
 				}
 			});
-			console.log(response, 'resposne');
 			if (response.ok) {
 				const data = await response.json();
 				const dataJson = data.body;
 				setTodos(dataJson);
 			} else {
-				console.log(response);
 				setEmailError(
 					'Si es la primera vez que ingresa debe validar su email con el correo de verificacion que le hemos enviado'
 				);
@@ -59,6 +56,7 @@ export default function Dashboard() {
 
 	const handleNewTodoSubmit = (e) => {
 		e.preventDefault();
+		console.log(todos)
 		// Agregar la nueva tarea al estado sin guardarla en el servidor
 		setTodos([ ...todos, newTodo ]);
 		// Limpiar el formulario
@@ -75,7 +73,7 @@ export default function Dashboard() {
 
 		try {
 			const response = await fetch(`${API_url}/todos`, {
-				method: 'PUT', // O el método HTTP correcto para actualizar en tu API
+				method: 'POST', // O el método HTTP correcto para actualizar en tu API
 				headers: {
 					'Content-Type': 'application/json',
 					Authorization: `Bearer ${accessToken}`
@@ -125,8 +123,8 @@ export default function Dashboard() {
 							className="border-none rounded-xl text-sm bg-yellow-400 w-40 "
 							placeholder="Objetivo"
 							type="date"
-							value={newTodo.finish_at}
-							onChange={(e) => setNewTodo({ ...newTodo, finish_at: e.target.value })}
+							value={newTodo.expiredate}
+							onChange={(e) => setNewTodo({ ...newTodo, expiredate: e.target.value })}
 						/>{' '}
 						  {' '}
 					</label>{' '}
@@ -146,19 +144,21 @@ export default function Dashboard() {
 				<div className="flex flex-raw">
 					{' '}
 					   {' '}
-					{todos.length > 0 ? (
-						todos.map((todo) => (
-							<div
-								key={todo.id}
-								className="flex flex-col center align rounded-xl text-center bg-yellow-400 w-40 m-1"
-							>
-								<p> Title: {todo.tittle} </p> <p> Body: {todo.body} </p>  {' '}
-								<p> Completed: {todo.completed.toString()} </p> <p> expiredate: {todo.expiradate} </p>  {' '}
-							</div>
-						))
-					) : (
-						<div> Loading todos... </div>
-					)}{' '}
+					   {Array.isArray(todos) && todos.length > 0 ? (
+   todos.map((todo) => (
+      <div
+         key={todo.id}
+         className="flex flex-col center align rounded-xl text-center bg-yellow-400 w-40 m-1"
+      >
+         <p> Title: {todo.title} </p> {/* Corregido a "title" */}
+         <p> Body: {todo.body} </p>
+         <p> Completed: {todo.completed.toString()} </p>
+         <p> expiredate: {todo.expiradate} </p>
+      </div>
+   ))
+) : (
+   <div> Loading todos... </div>
+)}{' '}
 					   {' '}
 				</div>{' '}
 				 <Logout />

@@ -11,10 +11,9 @@ const AuthContext = createContext({
 	getUser: () => ({}),
 	signout: () => {},
 	onlySaveUser: (_userData) => {},
-	accessToken: "",
-	refreshToken: "",
-  });
-  
+	accessToken: '',
+	refreshToken: ''
+});
 
 export function AuthProvider({ children }) {
 	const [ user, setUser ] = useState({});
@@ -22,11 +21,14 @@ export function AuthProvider({ children }) {
 	const [ refreshToken, setRefreshToken ] = useState('');
 	const [ isAuthenticated, setIsAuthenticated ] = useState(false);
 	const [ isLoading, setIsLoading ] = useState(true);
-	const memoizedcheckAuth = useCallback(checkAuth, [accessToken]); // Memoize 'checkAuth' function
+	const memoizedcheckAuth = useCallback(checkAuth, [ accessToken ]); // Memoize 'checkAuth' function
 
-	useEffect(() => {
-		memoizedcheckAuth();
-	  }, [memoizedcheckAuth]); // Include memoized dependency
+	useEffect(
+		() => {
+			memoizedcheckAuth();
+		},
+		[ memoizedcheckAuth ]
+	); // Include memoized dependency
 
 	function getAccessToken() {
 		return accessToken;
@@ -35,7 +37,6 @@ export function AuthProvider({ children }) {
 	function saveUser(userData) {
 		setAccessTokenAndRefreshToken(userData.body.accessToken, userData.body.refreshToken);
 		setUser(userData.body.user);
-		
 	}
 
 	function setAccessTokenAndRefreshToken(accessToken, refreshToken) {
@@ -119,8 +120,9 @@ export function AuthProvider({ children }) {
 				saveUser,
 				getUser,
 				signout,
-			accessToken,
-		refreshToken		}}
+				accessToken,
+				refreshToken
+			}}
 		>
 			{' '}
 			 {isLoading ? <div> Loading... </div> : children}  {' '}
@@ -130,7 +132,6 @@ export function AuthProvider({ children }) {
 
 async function retrieveUserInfo(accessToken) {
 	try {
-		console.log(accessToken, 'accestoken retrieveuserinfo')
 		const response = await fetch(`${API_url}/user`, {
 			method: 'GET',
 			headers: {
