@@ -12,7 +12,6 @@ export default async function requestNewAccessToken(refreshToken) {
 
         if (response.ok) {
             const json = await response.json();
-            console.log(json, 'requestNewAccessToken')
             if (json.error) {
                 throw new Error(json.error);
             }

@@ -9,9 +9,10 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorResponse, setErrorResponse] = useState("");
+  const [user, setUser] = useState('');
   const auth = useAuth();
   const goTo = useNavigate();
- 
+
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -29,6 +30,8 @@ export default function Login() {
         if (json.body.accessToken && json.body.refreshToken) {
           auth.saveUser(json);
           auth.setAccessTokenAndRefreshToken(json.body.accessToken, json.body.refreshToken);
+          setUser(json);
+        
           goTo('/login/dashboard');
       }
 

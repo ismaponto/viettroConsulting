@@ -21,7 +21,7 @@ export function AuthProvider({ children }) {
 	const [ refreshToken, setRefreshToken ] = useState('');
 	const [ isAuthenticated, setIsAuthenticated ] = useState(false);
 	const [ isLoading, setIsLoading ] = useState(true);
-	const memoizedcheckAuth = useCallback(checkAuth, [ accessToken ]); // Memoize 'checkAuth' function
+	const memoizedcheckAuth = useCallback(checkAuth, [accessToken]); // Memoize 'checkAuth' function
 
 	useEffect(
 		() => {
@@ -83,12 +83,12 @@ export function AuthProvider({ children }) {
 
 	async function checkAuth() {
 		try {
-			if (!!accessToken) {
-				// Existe access token
-				const userInfo = await retrieveUserInfo(accessToken);
-				setUser(userInfo);
-				setIsAuthenticated(true);
-			} else {
+			// if (!!accessToken) {
+			// 	// Existe access token
+			// 	const userInfo = await retrieveUserInfo(accessToken);
+			// 	setUser(userInfo);
+			// 		setIsAuthenticated(true);
+			// } else {
 				// No existe access token
 				const token = localStorage.getItem('token');
 				if (token) {
@@ -102,7 +102,7 @@ export function AuthProvider({ children }) {
 						setIsAuthenticated(true);
 					}
 				}
-			}
+			// }
 		} catch (error) {
 			console.error('Error checking authentication:', error);
 		} finally {
@@ -125,7 +125,7 @@ export function AuthProvider({ children }) {
 			}}
 		>
 			{' '}
-			 {isLoading ? <div> Loading... </div> : children}  {' '}
+			  {isLoading ? <div> Loading... </div> : children}  {' '}
 		</AuthContext.Provider>
 	);
 }
