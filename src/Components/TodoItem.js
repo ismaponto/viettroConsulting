@@ -1,8 +1,18 @@
 
 import React from 'react';
 import { API_url } from '../auth/const';
+const formatExpireDate = (expiredate) => {
+    const date = new Date(expiredate);
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'long' });
+    const year = date.getFullYear();
+  
+    return `${day} ${month} ${year}`;}
+
 
 const TodoItem = ({ title, body, completed, expiredate, onDelete, accessToken, _id,fetchTodos }) => {
+
+    
   const handleDeleteClick = async () => {
     try {
       // Haz una solicitud DELETE al servidor para eliminar el todo
@@ -38,7 +48,7 @@ const TodoItem = ({ title, body, completed, expiredate, onDelete, accessToken, _
       <p>Title: {title}</p>
       <p>Body: {body}</p>
       <p>Completed: {completed.toString()}</p>
-      <p>Expiredate: {expiredate}</p>
+      <p>Expiredate: {formatExpireDate(expiredate)}</p>
     </div>
   );
 };
