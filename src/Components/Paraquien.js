@@ -12,7 +12,7 @@ function Paraquien() {
       </h2>
 
       <div className="flex flex-row flex-wrap md:flex-col w-full justify-center">
-        <div className="flex flex-none inline-flex p-8">
+        <div className="flex flex-none inline-flex p-4">
           <img className="max-w-xs" src={imgpersona} alt="personas" />
         </div>
 
@@ -29,7 +29,7 @@ function Paraquien() {
       </div>
 
       <div className="flex flex-row flex-wrap w-full justify-center sm:flex-col">
-        <div className="flex flex-col max-w-lg center text-xl text-gray-500 justify-center p-8">
+        <div className="flex flex-col max-w-lg center text-xl text-gray-500 justify-center p-4">
           <ul className="list-disc">
             <li>
               <p>Para emprendedores que se sienten desorganizados</p>
@@ -42,16 +42,16 @@ function Paraquien() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-none inline-flex p-8">
+        <div className="flex flex-none inline-flex p-4">
           <img className="max-w-xs" src={imgemprendedor} alt="emprendedores" />
         </div>
       </div>
 
-      <div className="flex p-8 flex-row flex-wrap w-full justify-center md:flex-col p-2">
-        <div className="flex flex-none inline-flex p-8">
+      <div className="flex p-4 flex-row flex-wrap w-full justify-center md:flex-col p-2">
+        <div className="flex flex-none inline-flex p-4">
           <img className="max-w-xs" src={imgfrustrated} alt="emprendedores" />
         </div>
-        <div className="flex flex-col max-w-lg center text-xl text-gray-500 justify-center p-8">
+        <div className="flex flex-col max-w-lg center text-xl text-gray-500 justify-center p-4">
           <p>Estás cansado de:</p>
           <ul className="list-disc">
             <li>
@@ -70,7 +70,7 @@ function Paraquien() {
         </div>
       </div>
 
-      <div className="flex p-8 flex-row flex-wrap w-full justify-center md:flex-col p-6">
+      <div className="flex p-4 flex-row flex-wrap w-full justify-center md:flex-col p-6">
         <div className="flex flex-col max-w-lg center text-xl text-gray-500 justify-center p-24">
           <h3>Conmigo vas a:</h3>
           <ul className="list-disc">
@@ -85,7 +85,7 @@ function Paraquien() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-none flex-row inline-flex p-8">
+        <div className="flex flex-none flex-row inline-flex p-4">
           <img className="max-w-xs" src={imggoal} alt="emprendedores" />
         </div>
       </div>
