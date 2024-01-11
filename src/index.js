@@ -8,8 +8,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import { AuthProvider } from './auth/authProvider';
   //  import Login from './Routes/Login';
   //  import SignUp from './Routes/SignUp';
-  import Dashboard from './Routes/Dashboard';
-  import ProtectedRoute from './Routes/protectedRoute';
+  // import Dashboard from './Routes/Dashboard';
+  // import ProtectedRoute from './Routes/protectedRoute';
 const router = createBrowserRouter([
   {
     path: '/',
