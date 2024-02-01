@@ -1,6 +1,6 @@
+
 import React, { useState } from 'react';
 import logo from '../Logo1.png';
-import { Link, NavLink } from 'react-router-dom';
 
 function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,13 +9,15 @@ function NavigationBar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleButtonClick = (targetId) => {
+    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link to="/#Contacto" className="flex items-center">
-          <img rel="icon" type="image/png" src={logo} className="sm:h-48" alt="logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white" />
-        </Link>
+    <nav className="bg-white flex border-gray-200 dark:bg-gray-900 ">
+		<div className='flex  max-w-sm infline-flex'> <img src={logo} alt="" />
+      <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
         <button
           onClick={toggleMenu}
           type="button"
@@ -43,66 +45,48 @@ function NavigationBar() {
         <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <NavLink
-                to="/#matias"
+              <button
+                onClick={() => (window.location.href ='/#matias')}
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Sobre Mi
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/#metodo"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                El Metodo
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/#servicio"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Servicios
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/#exito"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Casos de Exito
-              </NavLink>
+              </button>
             </li>
             <li>
               <button
-                onClick={() => window.location.href = "/#contacto"}
+                onClick={() => (window.location.href ='/#metodo')}
+                className="block py-2 pl-3  pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                El Metodo
+              </button>
+            </li>
+            {/* <li>
+              <button
+                onClick={() => (window.location.href ='/#servicio')}
+                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Servicios
+              </button>
+            </li> */}
+            {/* <li>
+              <button
+                onClick={() => (window.location.href = '/#exito')}
+                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Casos de Exito
+              </button>
+            </li> */}
+            <li>
+              <button
+                onClick={() => (window.location.href = '/#contacto')}
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Contactame
               </button>
             </li>
-            {/* <li>
-              <Link
-                to="/login"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                {' '}
-                Login{' '}
-              </Link>{' '}
-            </li>
-            <li>
-              <Link
-                to="/signup"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                {' '}
-                Sign UP{' '}
-              </Link>{' '}
-            </li> */}
           </ul>
         </div>
-      </div>
+      </div></div>
     </nav>
   );
 }
