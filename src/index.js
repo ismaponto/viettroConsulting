@@ -5,11 +5,14 @@ import LandingPage from './Routes/LandingPage';
 import reportWebVitals from './reportWebVitals';
 import './App.css'; // Importa tu archivo app.css aquí
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ServicesPage from './Routes/ServicesPage'
-import AsesoriasPage from './Routes/AsesoriasPage'
-import ConsultoriasPage from './Routes/ConsultoriasPage'
-import FormacionPage from './Routes/FormacionPage'
-import RetiroPage from './Routes/RetiroPage'
+import ServicesPage from './Routes/ServicesPage';
+import AsesoriasPage from './Routes/AsesoriasPage';
+import ConsultoriasPage from './Routes/ConsultoriasPage';
+import FormacionPage from './Routes/FormacionPage';
+import RetiroPage from './Routes/RetiroPage';
+import BlogPage from './Routes/BlogPage';
+import posts from './Components/post/postdata'; // Importa el archivo de datos
+import FullPost from './Components/FullPost'
 // import { AuthProvider } from './auth/authProvider';
 //  import Login from './Routes/Login';
 //  import SignUp from './Routes/SignUp';
@@ -32,22 +35,23 @@ const router = createBrowserRouter([
 		path: '/consultorias',
 		element: <ConsultoriasPage />
 	},
-  {
+	{
 		path: '/formaciones',
 		element: <FormacionPage />
-	},	{
+	},
+	{
 		path: '/retiros',
 		element: <RetiroPage />
 	},
 
-	// {
-	// 	path: '/blog',
-	// 	element: <Blogenter />
-	// },
-	// {
-	// 	path: '/blog/:postId',
-	// 	element: <Services />
-	// }
+	{
+		path: '/blog',
+		element: <BlogPage posts={posts} />
+	},
+	{
+		path: '/blog/:postId',
+		element: <FullPost posts={posts} />
+	}
 
 	// {
 	//     path: '/login',

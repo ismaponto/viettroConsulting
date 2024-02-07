@@ -19,7 +19,7 @@ const Contacto = () => {
       />
 
 
-  <div id={"contacto"}className="p-16 flex sm:flex-row flex-wrap h-auto bg-blue-100 justify-center items-center ">
+  <div id={"contacto"}className="p-16 flex sm:flex-row flex-wrap h-100 bg-blue-100 justify-center items-center ">
       <h2 className="p-16 m-8 max-w-lg text-blue-800 tracking-widest text-xl">El 50% de las empresas fracasan en los primeros dos años,
        unite al grupo que superan esa brecha, organicemos una llamada para hablar del futuro de tus proyectos!</h2>
       <InlineWidget className='max-w-2xl rounded w-auto overflow-hidden' url="https://calendly.com/mativiettro" />
