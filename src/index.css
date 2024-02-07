@@ -4,7 +4,7 @@
 @import 'tailwindcss/utilities';
 body {
     margin: 0;
-    font-family: Manrope, sans-serif;
+    font-family: 'Mina', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
